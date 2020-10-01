@@ -4,3 +4,27 @@ $rust: #a44200ff;
 $bronze: #d58936ff;
 $maximum-yellow: #fffb46ff;
 
+.hover:hover {
+  cursor: pointer;
+}
+
+
+.loading {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid $blood-red; /* Blue */
+  border-radius: 50%;
+  border-width: 4px;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+
+  &.center {
+    margin: auto;
+    //position: absolute;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

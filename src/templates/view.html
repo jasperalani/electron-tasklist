@@ -11,17 +11,27 @@
 <body>
 
     <!-- Body -->
-    <div class="row list">
+    <div class="row view">
         <div class="col">
-
-            <div class="after-load">
-                <ul id="list">
-                    <li class="link create" data-fp="create">Create Task</li>
-                </ul>
-            </div>
 
             <div class="loader">
                 <div class="loading center"></div>
+            </div>
+
+            <div class="after-load">
+                <label for="task">
+                    <textarea id="task"></textarea>
+                </label>
+                <div class="task-info">
+                    <p class="created"></p>
+                </div>
+
+                <ul id="list">
+                    <li class="hover save">Save</li>
+                    <li class="hover">Finish</li>
+                    <li class="hover Delete">Delete</li>
+                    <li class="link hover" data-fp="list">Back</li>
+                </ul>
             </div>
 
         </div>
@@ -29,6 +39,6 @@
 
     <!-- You can also require other files to run in this process -->
     <script src="../controllers/utils.js"></script>
-    <script src="../controllers/list.js"></script>
+    <script src="../controllers/view.js"></script>
 </body>
 </html>

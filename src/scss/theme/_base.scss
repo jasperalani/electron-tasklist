@@ -1,5 +1,9 @@
-html body {
+html, body {
   color: $dark-sienna;
+}
+
+.list {
+
 }
 
 #list {
@@ -17,13 +21,25 @@ html body {
   }
 }
 
-.create {
-  textarea {
-    width: 87%;
-    font-size: 16px;
-  }
+textarea {
+  width: 87%;
+  font-size: 16px;
 }
 
-.hover:hover {
-  cursor: pointer;
+.create {
+
+}
+
+.view {
+
+}
+
+.loader {
+  top: 43%;
+  position: absolute;
+  left: 47%;
+}
+
+.after-load {
+  display: none;
 }

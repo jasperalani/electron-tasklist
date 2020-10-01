@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   create.addEventListener('click', () => {
     if (task.value === '') {
       alert('Task cannot be empty');
+      return
     }
 
     const insertQuery = builder.insert(['task'], [task.value], 'tasks');

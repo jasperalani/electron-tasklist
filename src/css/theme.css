@@ -1,4 +1,26 @@
-html body {
+.hover:hover {
+  cursor: pointer; }
+
+.loading {
+  border: 6px solid #f3f3f3;
+  /* Light grey */
+  border-top: 6px solid #69140eff;
+  /* Blue */
+  border-radius: 50%;
+  border-width: 4px;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite; }
+  .loading.center {
+    margin: auto; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+html, body {
   color: #3c1518ff; }
 
 #list {
@@ -10,9 +32,14 @@ html body {
     #list li.create:hover {
       cursor: pointer; }
 
-.create textarea {
+textarea {
   width: 87%;
   font-size: 16px; }
 
-.hover:hover {
-  cursor: pointer; }
+.loader {
+  top: 43%;
+  position: absolute;
+  left: 47%; }
+
+.after-load {
+  display: none; }
