@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="../css/wing.min.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+
+    <!-- Body -->
+
+    <div class="row create">
+
+        <div class="col">
+            <label for="task">
+                <textarea id="task" required placeholder="Task"></textarea>
+            </label>
+        </div>
+
+        <div class="col">
+            <ul id="list">
+                <li id="create" class="hover">Create Task</li>
+                <li class="link hover" data-fp="list">Cancel</li>
+            </ul>
+        </div>
+
+    </div>
+
+<!--    <div class="row">-->
+
+<!--    </div>-->
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../controllers/utils.js"></script>
+    <script src="../controllers/create.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+html body {
+  color: $dark-sienna;
+}
+
+#list {
+  list-style-type: none;
+
+  li {
+    padding: 16px 0 5px 0;
+    //padding-bottom: 5px;
+    border-bottom: 1px solid $bronze;
+    width: 90%;
+
+    &.create:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.create {
+  textarea {
+    width: 87%;
+    font-size: 16px;
+  }
+}
+
+.hover:hover {
+  cursor: pointer;
+}

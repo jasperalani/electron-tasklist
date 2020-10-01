@@ -1,0 +1,22 @@
+{
+  "name": "create-electron-app",
+  "version": "1.0.0",
+  "description": "Blank project",
+  "main": "main.js",
+  "scripts": {
+    "start-dev": "electron ./main.js development",
+    "start-prod": "electron ./main.js production"
+  },
+  "repository": "https://github.com/jasperalani/create-electron-app",
+  "author": "Jasper Alani",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^10.1.2"
+  },
+  "dependencies": {
+    "@jasperalani/mysql-query-builder": "^1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "mysql": "^2.18.1"
+  }
+}

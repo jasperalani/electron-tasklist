@@ -1,0 +1,18 @@
+html body {
+  color: #3c1518ff; }
+
+#list {
+  list-style-type: none; }
+  #list li {
+    padding: 16px 0 5px 0;
+    border-bottom: 1px solid #d58936ff;
+    width: 90%; }
+    #list li.create:hover {
+      cursor: pointer; }
+
+.create textarea {
+  width: 87%;
+  font-size: 16px; }
+
+.hover:hover {
+  cursor: pointer; }
