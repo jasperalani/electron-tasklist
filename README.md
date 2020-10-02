@@ -16,5 +16,3 @@ Todo/Tasklist app made with electron.
 ##### Development
 
 Run gulp task `watch-scss` for scss to be compiled into `src/css` directory.
-
-###### a lot to do...
