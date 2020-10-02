@@ -1,5 +1,5 @@
-const mysql = require('mysql');
-const builder = QueryBuilder = require(
+const {getDB} = require('../controllers/utils');
+const { QueryBuilder: builder, Condition } = require(
     '@jasperalani/mysql-query-builder/js/query-builder');
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -8,16 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   loadList(list)
 
-  const tasks = document.querySelectorAll('.task')
-
-  if(tasks !== null){
-    for(const task of tasks){
-      task.addEventListener('click', function () {
-        window.location = 'view.html'
-      })
-    }
-  }
-
   const afterLoad = document.querySelector('.after-load')
   afterLoad.style.display = 'block'
 
@@ -25,17 +15,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const loadList = function (list) {
   const loader = document.querySelector('.loading')
+  const connection = getDB(true)
 
-  const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'electron-tasklist',
-  });
-
-  connection.connect();
-
-  const selectQuery = builder.select('*', 'tasks')
+  const selectQuery = builder.select(
+    '*',
+    'tasks',
+    Condition.where(['finish', 'delete_'], ['0', '0'], '=')
+  )
 
   connection.query(selectQuery,
       function(error, tasks, fields) {
@@ -47,7 +33,11 @@ const loadList = function (list) {
 
         for(const task of tasks){
           const listItem = document.createElement('LI')
-          listItem.innerText = task.task
+          if(task.title !== null && task.title.length > 0){
+            listItem.innerText = first25(task.title)
+          }else{
+            listItem.innerText = first25(task.task)
+          }
           listItem.classList.add('link', 'hover')
           listItem.setAttribute('data-id', task.id)
           listItem.addEventListener('click', function() {
@@ -60,4 +50,19 @@ const loadList = function (list) {
       });
 
   connection.end();
+}
+
+function first25(text) {
+  if(text.length < 26){
+    return text
+  }
+  let count = 0
+  let returnText = ''
+  for(const letter of text){
+    returnText += letter
+    count++
+    if(count===25){
+      return returnText
+    }
+  }
 }

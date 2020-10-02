@@ -14,7 +14,7 @@
     "electron": "^10.1.2"
   },
   "dependencies": {
-    "@jasperalani/mysql-query-builder": "^1.0.0",
+    "@jasperalani/mysql-query-builder": "github:jasperalani/mysql-query-builder",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
     "mysql": "^2.18.1"
