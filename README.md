@@ -1,5 +1,7 @@
 #### Electron Tasklist
+###### Version 1.0.0
 Todo/Tasklist app made with electron.
+
 
 ##### Setup
 
