@@ -1,7 +1,8 @@
-#### Create Electron App
-Blank project for easy creation of an electron app.
+#### Electron Tasklist
+Todo/Tasklist app made with electron.
 
 ##### Setup
+
 `$ npm install` 
 
 ##### Run
@@ -10,4 +11,8 @@ Blank project for easy creation of an electron app.
 
 `$ npm run start-prod` for production.
 
+##### Development
+
 Run gulp task `watch-scss` for scss to be compiled into `src/css` directory.
+
+###### a lot to do...
